@@ -103,17 +103,17 @@ def create_plugin(num_heads=8, num_levels=4, num_points=4,
     
     field_collection.append(
         trt.PluginField("num_heads", 
-                       num_heads.to_bytes(4, byteorder='little', signed=True),
+                       [num_heads],
                        trt.PluginFieldType.INT32)
     )
     field_collection.append(
         trt.PluginField("num_levels",
-                       num_levels.to_bytes(4, byteorder='little', signed=True),
+                       [num_levels],
                        trt.PluginFieldType.INT32)
     )
     field_collection.append(
         trt.PluginField("num_points",
-                       num_points.to_bytes(4, byteorder='little', signed=True),
+                       [num_points],
                        trt.PluginFieldType.INT32)
     )
     

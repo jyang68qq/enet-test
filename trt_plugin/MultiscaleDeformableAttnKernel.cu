@@ -7,7 +7,7 @@ __device__ scalar_t ms_deform_attn_im2col_bilinear(
     const int num_heads, const int channels,
     const scalar_t h, const scalar_t w, const int m, const int c) {
     
-    if (h <= -1 || width <= h || w <= -1 || height <= w) {
+    if (h <= -1 || h >= height || w <= -1 || w >= width) {
         return 0;
     }
 
