@@ -1,6 +1,19 @@
+## Repository Contents
+
+This repository contains:
+1. **ENet-SAD-Simple**: Lua/Torch-based lane detection model
+2. **MultiscaleDeformableAttnPlugin**: TensorRT plugin for multiscale deformable attention (see [trt_plugin/README.md](./trt_plugin/README.md))
 
 ## Requirements
+
+### For ENet Lane Detection
 - [Torch](http://torch.ch/docs/getting-started.html), please follow the installation instructions at [fb.resnet.torch](https://github.com/facebook/fb.resnet.torch).
+
+### For TensorRT Plugin
+- CUDA Toolkit (10.2 or later)
+- TensorRT (7.0 or later)
+- CMake (3.10 or later)
+- C++14 compatible compiler
 
 ## Before Start
 
@@ -65,7 +78,7 @@ Please follow [train_final.txt](./list/train_final.txt) and [val_final.txt](./li
 
 ## Citation
 
-If you use this code, please cite the following publication:
+If you use the ENet-SAD-Simple code, please cite the following publication:
 
 ``` 
 @article{hou2019learning,
@@ -73,6 +86,17 @@ If you use this code, please cite the following publication:
   author={Hou, Yuenan and Ma, Zheng and Liu, Chunxiao and Loy, Chen Change},
   journal={arXiv preprint arXiv:1908.00821},
   year={2019}
+}
+```
+
+If you use the MultiscaleDeformableAttnPlugin, please cite:
+
+```
+@inproceedings{zhu2020deformable,
+  title={Deformable DETR: Deformable Transformers for End-to-End Object Detection},
+  author={Zhu, Xizhou and Su, Weijie and Lu, Lewei and Li, Bin and Wang, Xiaogang and Dai, Jifeng},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
 }
 ```
 
